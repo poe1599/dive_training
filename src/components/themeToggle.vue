@@ -1,17 +1,18 @@
 <template>
-  <div></div>
+  <div>
+    Color <br />
+    <button @click="toggleTheme">{{ theme }}</button>
+  </div>
 </template>
 <script>
 export default {
-  name: 'AppIndex'
+  name: 'ThemeToggle'
 }
 </script>
 <script setup>
 import { useThemeStore } from '@/stores/theme'
 
-const { initTheme } = useThemeStore()
-initTheme()
+const { toggleTheme, theme } = useThemeStore()
 </script>
-<style lang="scss" src="@/assets/scss/_variable.scss"></style>
 <style lang="scss" scoped>
 </style>

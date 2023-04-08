@@ -1,0 +1,26 @@
+:root[data-theme='dark'] {
+  --color-text: #efefef;
+  --color-background: #18202a;
+  --color-code: #f548bd;
+}
+
+:root[data-theme='light'] {
+  --color-text: #222222;
+  --color-background: #efefef;
+  --color-code: #c30085;
+}
+
+// html {
+//   background-color: var(--color-background);
+//   color: var(--color-text);
+//   transition: 300ms;
+// }
+
+$color-text: var(--color-text);
+$color-background: var(--color-background);
+
+html {
+  background-color: $color-background;
+  color: $color-text;
+  transition: 300ms;
+}
