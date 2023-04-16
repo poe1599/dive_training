@@ -3,6 +3,7 @@ import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import vueJsx from '@vitejs/plugin-vue-jsx'
 import VueI18nPlugin from '@intlify/unplugin-vue-i18n/vite'
+import { svgBuilder } from './src/plugins/svgBuilder'
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -12,7 +13,8 @@ export default defineConfig({
     VueI18nPlugin({
       include: [fileURLToPath(new URL('./locales/**', import.meta.url))],
       compositionOnly: true
-    })
+    }),
+    svgBuilder('./src/assets/icons/')
   ],
   resolve: {
     alias: {
