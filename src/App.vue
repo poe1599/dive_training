@@ -28,6 +28,5 @@ initTheme()
 const { initLocalLang } = useLocalLangStore()
 initLocalLang()
 </script>
-<style lang="scss" src="@/assets/scss/_variable.scss"></style>
 <style lang="scss" scoped>
 </style>

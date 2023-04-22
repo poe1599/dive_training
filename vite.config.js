@@ -16,6 +16,16 @@ export default defineConfig({
     }),
     svgBuilder('./src/assets/icons/')
   ],
+  css: {
+    preprocessorOptions: {
+      scss: {
+        additionalData: `
+          @import "./src/scss/helpers/variable.scss";
+          @import "./src/scss/components/button.scss";
+        `
+      }
+    }
+  },
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
